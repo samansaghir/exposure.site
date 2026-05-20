@@ -58,7 +58,7 @@ section{padding:90px 60px;}
 .hero-h1{font-family:'Nohemi',sans-serif;font-size:104px;font-weight:500;line-height:125px;letter-spacing:-2px;margin-bottom:22px;color:#ffffff;}
 .hero-h1 .name{background:linear-gradient(135deg,#fff 0%,var(--grad-a) 55%,var(--grad-b) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .hero-sub{font-size:18px;color:var(--muted);line-height:1.7;margin-bottom:12px;}
-.hero-support{font-size:15px;color:var(--muted2);line-height:1.65;margin-bottom:38px;}
+.hero-support{font-size:15px;color:#ffffff;line-height:1.65;margin-bottom:38px;}
 .hero-cta{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#000;font-family:'Nohemi',sans-serif;font-weight:600;font-size:15px;padding:14px 32px;border-radius:50px;text-decoration:none;box-shadow:0 8px 32px rgba(221,114,64,.3);transition:opacity .2s,transform .2s,box-shadow .2s;}
 .hero-cta:hover{opacity:.85;transform:translateY(-2px);box-shadow:0 12px 40px rgba(221,114,64,.4);}
  
@@ -213,7 +213,26 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:24px 60px
 .modal-close{position:absolute;top:18px;right:18px;background:none;border:none;color:var(--muted);cursor:pointer;font-size:20px;line-height:1;transition:color .2s;}
 .modal-close:hover{color:#fff;}
  
-/* ── ANIMATIONS ── */
+/* ── LEGAL PAGES ── */
+.legal-page{background:var(--bg);min-height:100vh;display:flex;flex-direction:column;}
+.legal-nav{position:relative;top:auto;display:flex;align-items:center;justify-content:space-between;padding:18px 60px;background:rgba(0,0,0,0.95);border-bottom:1px solid var(--border);}
+.legal-hero{background:var(--bg2);border-bottom:1px solid var(--border);padding:100px 60px 60px;}
+.legal-hero-inner{max-width:860px;margin:0 auto;}
+.legal-title{font-family:'Nohemi',sans-serif;font-size:clamp(42px,6vw,80px);font-weight:500;line-height:1.1;color:#ffffff;margin-bottom:16px;letter-spacing:-1.5px;}
+.legal-subtitle{color:var(--muted);font-size:17px;line-height:1.7;}
+.legal-body{flex:1;padding:60px;}
+.legal-content{max-width:780px;margin:0 auto;}
+.legal-content p{color:var(--muted);font-size:15px;line-height:1.85;margin-bottom:20px;}
+.legal-content h3{font-family:'Nohemi',sans-serif;font-weight:500;font-size:22px;color:#ffffff;margin:36px 0 14px;}
+.legal-content h3:first-child{margin-top:0;}
+.legal-email{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(221,114,64,.3);transition:border-color .2s;}
+.legal-email:hover{border-color:var(--accent);}
+.legal-footer{background:var(--bg);border-top:1px solid var(--border);padding:24px 60px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-top:auto;}
+@media(max-width:768px){
+  .legal-nav{padding:16px 20px;}.legal-nav .nav-links,.legal-nav .nav-cta{display:none;}
+  .legal-hero{padding:70px 20px 40px;}.legal-body{padding:40px 20px;}.legal-footer{padding:20px;flex-direction:column;align-items:flex-start;}
+}
+ 
 .fu{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease;}
 .fu.visible{opacity:1;transform:translateY(0);}
 .d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}
@@ -261,7 +280,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:24px 60px
     <li><a href="#how-i-work">How I Work</a></li>
     <li><a href="#faqs">FAQs</a></li>
   </ul>
-  <a href="https://wa.me/923705161764" target="_blank" rel="noopener" class="nav-cta">Hire Me</a>
+  <a href="https://wa.me/+923705161764" target="_blank" rel="noopener" class="nav-cta">Hire Me</a>
   <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
@@ -270,7 +289,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:24px 60px
   <a href="#pricing" onclick="closeMenu()">Pricing</a>
   <a href="#how-i-work" onclick="closeMenu()">How I Work</a>
   <a href="#faqs" onclick="closeMenu()">FAQs</a>
-  <a href="https://wa.me/923705161764" target="_blank" rel="noopener" onclick="closeMenu()" style="color:var(--accent);">Hire Me</a>
+  <a href="https://wa.me/+923705161764" target="_blank" rel="noopener" onclick="closeMenu()" style="color:var(--accent);">Hire Me</a>
 </div>
  
 <!-- ══════════ HERO ══════════ -->
@@ -280,7 +299,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:24px 60px
     <h1 class="hero-h1">Hi, I'm<br/><span class="name">Saman Saghir</span></h1>
     <p class="hero-sub">I create websites that not only look visually appealing but also rank on Google.</p>
     <p class="hero-support">Helping small businesses, startups, agencies and e-commerce brands build powerful WordPress websites. Custom built, conversion focused, and SEO ready.</p>
-    <a href="https://wa.me/923705161764" target="_blank" rel="noopener" class="hero-cta">
+    <a href="https://wa.me/+923705161764" target="_blank" rel="noopener" class="hero-cta">
       Get Started
       <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
@@ -326,7 +345,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:24px 60px
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
           Instagram
         </a>
-        <a href="https://wa.me/923705161764" target="_blank" rel="noopener" class="social-link">
+        <a href="https://wa.me/+923705161764" target="_blank" rel="noopener" class="social-link">
           <!-- WhatsApp -->
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           WhatsApp
@@ -338,7 +357,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:24px 60px
         </a>
       </div>
  
-      <a href="https://wa.me/923705161764" target="_blank" rel="noopener" class="about-cta">Let's Work Together →</a>
+      <a href="https://wa.me/+923705161764" target="_blank" rel="noopener" class="about-cta">Let's Work Together →</a>
     </div>
     <div class="about-right fu d1">
       <div class="about-body">
@@ -358,7 +377,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:24px 60px
         <span class="section-label">What I Offer</span>
         <h2 class="section-title">Services that are <span class="gt">tailored</span></h2>
       </div>
-      <a href="https://wa.me/923705161764" target="_blank" rel="noopener" class="btn-outline">Start a Conversation</a>
+      <a href="https://wa.me/+923705161764" target="_blank" rel="noopener" class="btn-outline">Start a Conversation</a>
     </div>
  
     <div class="carousel-wrap">
@@ -469,7 +488,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:24px 60px
           <li>1 round of revisions</li>
           <li>Custom delivery timeline</li>
         </ul>
-        <a href="https://wa.me/923705161764" target="_blank" rel="noopener" class="btn-outline" style="justify-content:center;">Get a Custom Quote</a>
+        <a href="https://cal.com/saman-saghir/website-consultation" target="_blank" rel="noopener" class="btn-outline" style="justify-content:center;">Get a Custom Quote</a>
       </div>
  
       <div class="pricing-card popular fu d1">
@@ -487,7 +506,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:24px 60px
           <li>Unlimited revisions</li>
           <li>Custom delivery timeline</li>
         </ul>
-        <a href="https://wa.me/923705161764" target="_blank" rel="noopener" class="btn-primary" style="justify-content:center;">Get a Custom Quote</a>
+        <a href="https://cal.com/saman-saghir/website-consultation" target="_blank" rel="noopener" class="btn-primary" style="justify-content:center;">Get a Custom Quote</a>
       </div>
  
       <div class="pricing-card fu d2">
@@ -503,7 +522,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:24px 60px
           <li>Post launch support</li>
           <li>Custom delivery timeline</li>
         </ul>
-        <a href="https://wa.me/923705161764" target="_blank" rel="noopener" class="btn-outline" style="justify-content:center;">Get a Custom Quote</a>
+        <a href="https://cal.com/saman-saghir/website-consultation" target="_blank" rel="noopener" class="btn-outline" style="justify-content:center;">Get a Custom Quote</a>
       </div>
  
     </div>
@@ -619,7 +638,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:24px 60px
     <div class="contact-box">
       <div class="contact-box-title">Ready to build your website?</div>
       <p class="contact-box-sub">Get a custom quote for your project. Free consultation, zero obligations.</p>
-      <a href="https://wa.me/923705161764" target="_blank" rel="noopener" class="btn-primary" style="width:fit-content;margin-top:6px;">Start a Conversation</a>
+      <a href="https://wa.me/+923705161764" target="_blank" rel="noopener" class="btn-primary" style="width:fit-content;margin-top:6px;">Start a Conversation</a>
     </div>
   </div>
 </section>
@@ -627,74 +646,206 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:24px 60px
 <footer>
   <p class="footer-copy">© 2026 Saman Saghir – All rights reserved.</p>
   <div class="footer-links">
-    <a href="#" onclick="openModal('privacy',event)">Privacy Policy</a>
-    <a href="#" onclick="openModal('terms',event)">Terms &amp; Conditions</a>
-    <a href="#" onclick="openModal('disclaimer',event)">Disclaimer</a>
+    <a href="javascript:void(0)" onclick="showPage('privacy')">Privacy Policy</a>
+    <a href="javascript:void(0)" onclick="showPage('terms')">Terms &amp; Conditions</a>
+    <a href="javascript:void(0)" onclick="showPage('disclaimer')">Disclaimer</a>
   </div>
 </footer>
  
-<!-- PRIVACY MODAL -->
-<div class="modal-overlay" id="modal-privacy">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('privacy')">✕</button>
-    <h3>Privacy Policy</h3>
-    <p>At Saman Saghir, your privacy is a priority. This Privacy Policy explains how I collect, use, and protect your personal information when you visit this website or engage my services.</p>
-    <h4>Information I Collect</h4>
-    <p>When you contact me I may collect your name, email address, phone number, and project details. I may also collect non personal data such as browser type, device type, pages visited, and time on site.</p>
-    <h4>How I Use Your Information</h4>
-    <p>Your information is used solely to respond to inquiries, discuss project requirements, send proposals, and communicate throughout the project. I will never sell, rent, or share your data with third parties without your consent.</p>
-    <h4>Cookies</h4>
-    <p>This website may use cookies to improve your browsing experience. You can disable cookies through your browser settings at any time.</p>
-    <h4>Data Security</h4>
-    <p>I take reasonable steps to protect your personal information. However, no method of transmission over the internet is completely secure.</p>
-    <h4>Your Rights</h4>
-    <p>You have the right to request access to, corrections of, or deletion of your personal information. Please contact me directly.</p>
-    <h4>Contact</h4>
-    <p>samansaghir307@gmail.com</p>
+<!-- ══════════ LEGAL PAGES (shown in-place with full header+footer) ══════════ -->
+ 
+<!-- PRIVACY POLICY PAGE -->
+<div id="page-privacy" class="legal-page" style="display:none;">
+  <nav id="navbar-privacy" class="legal-nav">
+    <a href="javascript:void(0)" onclick="showMain()" class="nav-logo">Saman<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="javascript:void(0)" onclick="showMain();smoothTo('about-me')">About Me</a></li>
+      <li><a href="javascript:void(0)" onclick="showMain();smoothTo('services')">Services</a></li>
+      <li><a href="javascript:void(0)" onclick="showMain();smoothTo('pricing')">Pricing</a></li>
+      <li><a href="javascript:void(0)" onclick="showMain();smoothTo('how-i-work')">How I Work</a></li>
+      <li><a href="javascript:void(0)" onclick="showMain();smoothTo('faqs')">FAQs</a></li>
+    </ul>
+    <a href="https://wa.me/+923705161764" target="_blank" rel="noopener" class="nav-cta">Hire Me</a>
+  </nav>
+  <div class="legal-hero">
+    <div class="legal-hero-inner">
+      <span class="section-label">Legal</span>
+      <h1 class="legal-title">Privacy <span class="gt">Policy</span></h1>
+      <p class="legal-subtitle">How I collect, use, and protect your personal information.</p>
+    </div>
   </div>
+  <div class="legal-body">
+    <div class="legal-content">
+      <p>At Saman Saghir, your privacy is a priority. This Privacy Policy explains how I collect, use, and protect your personal information when you visit this website or engage my services. By using this website, you agree to the practices described in this policy.</p>
+      <h3>Information I Collect</h3>
+      <p>When you contact me through this website, I may collect personal information such as your name, email address, phone number, and details about your project. This information is provided voluntarily by you when you fill out a contact form, send an email, or book a consultation call.</p>
+      <p>I may also collect non personal data automatically through standard web technologies, including your browser type, device type, pages visited, and time spent on the site. This data helps me understand how visitors use the website and improve the overall experience.</p>
+      <h3>How I Use Your Information</h3>
+      <p>The information you provide is used solely to respond to your inquiries, discuss your project requirements, send you a proposal, and communicate throughout the project. I do not use your information for unsolicited marketing and I will never sell, rent, or share your personal data with third parties without your consent, except where required by law.</p>
+      <h3>Cookies</h3>
+      <p>This website may use cookies to improve your browsing experience. Cookies are small files stored on your device that help the site function properly and remember your preferences. You can disable cookies through your browser settings at any time, though some features of the website may not function as intended.</p>
+      <h3>Third Party Services</h3>
+      <p>This website may contain links to third party platforms such as WhatsApp, LinkedIn, or booking tools. Once you leave this website, I am not responsible for the privacy practices of those platforms. I encourage you to review their individual privacy policies.</p>
+      <h3>Data Security</h3>
+      <p>I take reasonable steps to protect your personal information from unauthorized access, loss, or misuse. However, no method of transmission over the internet is completely secure, and I cannot guarantee absolute security.</p>
+      <h3>Your Rights</h3>
+      <p>You have the right to request access to the personal information I hold about you, request corrections, or ask for it to be deleted. To exercise any of these rights, please contact me directly.</p>
+      <h3>Contact</h3>
+      <p>If you have any questions about this Privacy Policy, please reach out at <a href="mailto:samansaghir307@gmail.com" class="legal-email">samansaghir307@gmail.com</a></p>
+    </div>
+  </div>
+  <footer class="legal-footer">
+    <p class="footer-copy">© 2026 Saman Saghir – All rights reserved.</p>
+    <div class="footer-links">
+      <a href="javascript:void(0)" onclick="showPage('privacy')">Privacy Policy</a>
+      <a href="javascript:void(0)" onclick="showPage('terms')">Terms &amp; Conditions</a>
+      <a href="javascript:void(0)" onclick="showPage('disclaimer')">Disclaimer</a>
+    </div>
+  </footer>
 </div>
  
-<!-- TERMS MODAL -->
-<div class="modal-overlay" id="modal-terms">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('terms')">✕</button>
-    <h3>Terms &amp; Conditions</h3>
-    <p>By accessing this website or engaging my services, you agree to be bound by these Terms and Conditions.</p>
-    <h4>Services</h4>
-    <p>Saman Saghir provides custom WordPress development, WooCommerce store setup, SEO optimization, speed optimization, and theme and plugin customization. The full scope is agreed upon in writing before work begins.</p>
-    <h4>Payment</h4>
-    <p>Payment terms are outlined in each individual project proposal. A deposit may be required before work begins on larger projects. Final payment is due before the completed website is handed over or launched.</p>
-    <h4>Revisions</h4>
-    <p>Revision rounds are included as specified in your package. Requests outside the original scope may be treated as additional work and quoted separately.</p>
-    <h4>Intellectual Property</h4>
-    <p>Upon receipt of full payment, ownership of the completed website is transferred to the client. I retain the right to showcase the project in my portfolio unless the client requests otherwise in writing.</p>
-    <h4>Limitation of Liability</h4>
-    <p>I am not liable for any indirect, incidental, or consequential damages. My total liability shall not exceed the amount paid for the specific project.</p>
-    <h4>Contact</h4>
-    <p>samansaghir307@gmail.com</p>
+<!-- TERMS & CONDITIONS PAGE -->
+<div id="page-terms" class="legal-page" style="display:none;">
+  <nav id="navbar-terms" class="legal-nav">
+    <a href="javascript:void(0)" onclick="showMain()" class="nav-logo">Saman<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="javascript:void(0)" onclick="showMain();smoothTo('about-me')">About Me</a></li>
+      <li><a href="javascript:void(0)" onclick="showMain();smoothTo('services')">Services</a></li>
+      <li><a href="javascript:void(0)" onclick="showMain();smoothTo('pricing')">Pricing</a></li>
+      <li><a href="javascript:void(0)" onclick="showMain();smoothTo('how-i-work')">How I Work</a></li>
+      <li><a href="javascript:void(0)" onclick="showMain();smoothTo('faqs')">FAQs</a></li>
+    </ul>
+    <a href="https://wa.me/+923705161764" target="_blank" rel="noopener" class="nav-cta">Hire Me</a>
+  </nav>
+  <div class="legal-hero">
+    <div class="legal-hero-inner">
+      <span class="section-label">Legal</span>
+      <h1 class="legal-title">Terms &amp; <span class="gt">Conditions</span></h1>
+      <p class="legal-subtitle">The terms that govern use of this website and my services.</p>
+    </div>
   </div>
+  <div class="legal-body">
+    <div class="legal-content">
+      <h3>Acceptance of Terms</h3>
+      <p>By accessing this website or engaging my services, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use this website or proceed with a project engagement.</p>
+      <h3>Services</h3>
+      <p>Saman Saghir provides custom WordPress development, WooCommerce store setup, SEO optimization, speed optimization, and theme and plugin customization services. The full scope of any project is agreed upon in writing before work begins, and outlined in a formal proposal sent to the client.</p>
+      <h3>Project Agreement</h3>
+      <p>All projects begin with a consultation followed by a written proposal. Work will only commence once the proposal has been approved by the client. Any changes to the agreed scope of work during the project may affect the timeline and pricing, and will be communicated clearly before proceeding.</p>
+      <h3>Payment</h3>
+      <p>Payment terms are outlined in each individual project proposal. A deposit may be required before work begins on larger projects. Final payment is due before the completed website is handed over or launched. I reserve the right to pause work if agreed payment milestones are not met.</p>
+      <h3>Revisions</h3>
+      <p>Revision rounds are included as specified in your package. Revision requests must be within the original agreed scope of work. Requests that fall outside the original scope may be treated as additional work and quoted separately.</p>
+      <h3>Intellectual Property</h3>
+      <p>Upon receipt of full payment, ownership of the completed website and its design is transferred to the client. I retain the right to showcase the completed project in my portfolio unless the client requests otherwise in writing.</p>
+      <h3>Client Responsibilities</h3>
+      <p>The client is responsible for providing all necessary content, images, branding materials, and login credentials in a timely manner. Delays caused by the client may affect the agreed project timeline.</p>
+      <h3>Limitation of Liability</h3>
+      <p>I am not liable for any indirect, incidental, or consequential damages arising from the use of this website or the services provided. My total liability in any case shall not exceed the amount paid for the specific project in question.</p>
+      <h3>Termination</h3>
+      <p>Either party may terminate a project engagement with written notice. Work completed up to the point of termination will be charged accordingly based on the agreed project rate.</p>
+      <h3>Changes to These Terms</h3>
+      <p>I reserve the right to update these Terms and Conditions at any time. Changes will be reflected on this page with an updated date.</p>
+      <h3>Contact</h3>
+      <p>For any questions regarding these Terms and Conditions, please contact <a href="mailto:samansaghir307@gmail.com" class="legal-email">samansaghir307@gmail.com</a></p>
+    </div>
+  </div>
+  <footer class="legal-footer">
+    <p class="footer-copy">© 2026 Saman Saghir – All rights reserved.</p>
+    <div class="footer-links">
+      <a href="javascript:void(0)" onclick="showPage('privacy')">Privacy Policy</a>
+      <a href="javascript:void(0)" onclick="showPage('terms')">Terms &amp; Conditions</a>
+      <a href="javascript:void(0)" onclick="showPage('disclaimer')">Disclaimer</a>
+    </div>
+  </footer>
 </div>
  
-<!-- DISCLAIMER MODAL -->
-<div class="modal-overlay" id="modal-disclaimer">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('disclaimer')">✕</button>
-    <h3>Disclaimer</h3>
-    <p>The information provided on this website is for general informational purposes only. I make no warranties or guarantees regarding the completeness, accuracy, or reliability of the information presented here.</p>
-    <p>Results and outcomes mentioned reflect individual experiences and may not represent typical results. Every project is different and outcomes will vary depending on scope, industry, and specific requirements.</p>
-    <p>This website may contain links to external platforms. I have no control over those sites and accept no responsibility for any loss arising from their use.</p>
-    <p>Content here does not constitute professional legal, financial, or business advice. Please consult an appropriate professional for advice specific to your situation.</p>
-    <p>By using this website, you accept this Disclaimer in full. Questions? samansaghir307@gmail.com</p>
+<!-- DISCLAIMER PAGE -->
+<div id="page-disclaimer" class="legal-page" style="display:none;">
+  <nav id="navbar-disclaimer" class="legal-nav">
+    <a href="javascript:void(0)" onclick="showMain()" class="nav-logo">Saman<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="javascript:void(0)" onclick="showMain();smoothTo('about-me')">About Me</a></li>
+      <li><a href="javascript:void(0)" onclick="showMain();smoothTo('services')">Services</a></li>
+      <li><a href="javascript:void(0)" onclick="showMain();smoothTo('pricing')">Pricing</a></li>
+      <li><a href="javascript:void(0)" onclick="showMain();smoothTo('how-i-work')">How I Work</a></li>
+      <li><a href="javascript:void(0)" onclick="showMain();smoothTo('faqs')">FAQs</a></li>
+    </ul>
+    <a href="https://wa.me/+923705161764" target="_blank" rel="noopener" class="nav-cta">Hire Me</a>
+  </nav>
+  <div class="legal-hero">
+    <div class="legal-hero-inner">
+      <span class="section-label">Legal</span>
+      <h1 class="legal-title">Dis<span class="gt">claimer</span></h1>
+      <p class="legal-subtitle">Important information about the content on this website.</p>
+    </div>
   </div>
+  <div class="legal-body">
+    <div class="legal-content">
+      <p>The information provided on this website is for general informational purposes only. While I make every effort to ensure the content is accurate and up to date, I make no warranties or guarantees of any kind regarding the completeness, accuracy, or reliability of the information presented here.</p>
+      <p>The results and outcomes mentioned on this website, including project examples and client satisfaction, reflect individual experiences and may not represent typical results. Every project is different and outcomes will vary depending on the scope, industry, and specific requirements involved.</p>
+      <p>This website may contain links to external websites or third party platforms. These links are provided for convenience only. I have no control over the content of those sites and accept no responsibility for them or for any loss or damage that may arise from your use of them.</p>
+      <p>The content on this website does not constitute professional legal, financial, or business advice. For advice specific to your situation, please consult an appropriate professional.</p>
+      <p>By using this website, you accept this Disclaimer in full. If you have any questions, please contact <a href="mailto:samansaghir307@gmail.com" class="legal-email">samansaghir307@gmail.com</a></p>
+    </div>
+  </div>
+  <footer class="legal-footer">
+    <p class="footer-copy">© 2026 Saman Saghir – All rights reserved.</p>
+    <div class="footer-links">
+      <a href="javascript:void(0)" onclick="showPage('privacy')">Privacy Policy</a>
+      <a href="javascript:void(0)" onclick="showPage('terms')">Terms &amp; Conditions</a>
+      <a href="javascript:void(0)" onclick="showPage('disclaimer')">Disclaimer</a>
+    </div>
+  </footer>
 </div>
  
 <script>
-/* ── NAV ── */
+/* ── NAV SCROLL ── */
 window.addEventListener('scroll',()=>{
   document.getElementById('navbar').style.background=window.scrollY>40?'rgba(0,0,0,0.98)':'rgba(0,0,0,0.85)';
 });
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
 function closeMenu(){document.getElementById('mobileMenu').classList.remove('open');}
+ 
+/* ── SPA PAGE ROUTING ── */
+const MAIN_ELS = ['navbar','mobileMenu',...Array.from(document.querySelectorAll('body > section, body > footer:not(.legal-footer)'))].map(el=>el.id||el);
+ 
+function showPage(id){
+  /* hide all main content */
+  document.getElementById('navbar').style.display='none';
+  document.getElementById('mobileMenu').style.display='none';
+  document.querySelectorAll('body > section, body > footer').forEach(el=>el.style.display='none');
+  /* hide other legal pages */
+  document.querySelectorAll('.legal-page').forEach(el=>el.style.display='none');
+  /* show target */
+  document.getElementById('page-'+id).style.display='block';
+  window.scrollTo(0,0);
+  /* update URL without reload */
+  const slugs={privacy:'privacy-policy',terms:'terms-and-conditions',disclaimer:'disclaimer'};
+  history.pushState({page:id},'','/'+slugs[id]);
+}
+ 
+function showMain(){
+  document.getElementById('navbar').style.display='';
+  document.getElementById('mobileMenu').style.display='';
+  document.querySelectorAll('body > section, body > footer').forEach(el=>el.style.display='');
+  document.querySelectorAll('.legal-page').forEach(el=>el.style.display='none');
+  history.pushState({page:'home'},'','/');
+  window.scrollTo(0,0);
+}
+ 
+function smoothTo(id){
+  setTimeout(()=>{
+    const el=document.getElementById(id);
+    if(el)el.scrollIntoView({behavior:'smooth'});
+  },80);
+}
+ 
+/* Handle browser back/forward */
+window.addEventListener('popstate',e=>{
+  if(!e.state||e.state.page==='home') showMain();
+  else showPage(e.state.page);
+});
  
 /* ── FAQ ── */
 function toggleFaq(btn){
@@ -703,11 +854,6 @@ function toggleFaq(btn){
   document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').classList.remove('open');});
   if(!was){item.classList.add('open');ans.classList.add('open');}
 }
- 
-/* ── MODALS ── */
-function openModal(id,e){if(e)e.preventDefault();document.getElementById('modal-'+id).classList.add('open');document.body.style.overflow='hidden';}
-function closeModal(id){document.getElementById('modal-'+id).classList.remove('open');document.body.style.overflow='';}
-document.querySelectorAll('.modal-overlay').forEach(o=>{o.addEventListener('click',e=>{if(e.target===o){o.classList.remove('open');document.body.style.overflow='';}});});
  
 /* ── SCROLL FADE ── */
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1});
@@ -724,79 +870,53 @@ function animateCounters(){
 const sObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){animateCounters();sObs.disconnect();}});},{threshold:0.3});
 const sEl=document.getElementById('stats');if(sEl)sObs.observe(sEl);
  
-/* ── AUTO-RUNNING CAROUSEL — set CSS variable for loop width ── */
+/* ── AUTO-RUNNING CAROUSEL ── */
 (function(){
-  const track = document.getElementById('carouselTrack');
-  if(!track) return;
-  // 5 original cards × (340px card + 20px gap) = 1800px
-  const CARD_W = 340, GAP = 20, COUNT = 5;
-  const loopPx = COUNT * (CARD_W + GAP);
-  track.style.setProperty('--loop-offset', `-${loopPx}px`);
-  track.style.animationDuration = '24s';
-  // also set on the keyframe via inline override on the element is enough
-  // because @keyframes uses the CSS custom property set here:
-  document.documentElement.style.setProperty('--loop-width', `${loopPx}px`);
+  const track=document.getElementById('carouselTrack');
+  if(!track)return;
+  const CARD_W=340,GAP=24,COUNT=5;
+  const loopPx=COUNT*(CARD_W+GAP);
+  track.style.setProperty('--loop-offset',`-${loopPx}px`);
 })();
  
 /* ══════════════════════════════════════════
-   THREE.JS 3D HERO — colours: #DD7240 + #6A58A4
+   THREE.JS 3D HERO
 ══════════════════════════════════════════ */
 (function(){
   const canvas=document.getElementById('three-canvas');
   const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:false});
   renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
   renderer.setClearColor(0x000000,1);
- 
   const scene=new THREE.Scene();
   const W=()=>canvas.parentElement.clientWidth;
   const H=()=>canvas.parentElement.clientHeight;
   const camera=new THREE.PerspectiveCamera(55,W()/H(),0.1,100);
   camera.position.z=5.5;
- 
   function onResize(){renderer.setSize(W(),H(),false);camera.aspect=W()/H();camera.updateProjectionMatrix();}
   onResize();window.addEventListener('resize',onResize);
- 
-  /* Updated colours per instructions */
-  const cOrange=0xDD7240; /* was #F77100, now #DD7240 */
-  const cBrown =0x96593C;
-  const cPurple=0x6A58A4; /* was #574496, now #6A58A4 */
- 
+  const cOrange=0xDD7240,cBrown=0x96593C,cPurple=0x6A58A4;
   function wireMat(color,opacity){return new THREE.MeshBasicMaterial({color,wireframe:true,transparent:true,opacity});}
- 
   const objects=[];
-  function addObj(geo,mat,x,y,z,rx,ry){
-    const m=new THREE.Mesh(geo,mat);m.position.set(x,y,z);scene.add(m);objects.push({m,rx,ry});
-  }
- 
-  addObj(new THREE.SphereGeometry(5,20,20),       wireMat(0xffffff,0.03), 0,   0,   -3,    0.001, 0.0008);
-  addObj(new THREE.TorusGeometry(2.0,0.38,14,48), wireMat(cPurple,0.18), -3.0, 0.4, -1.5,  0.003, 0.004);
-  addObj(new THREE.TorusGeometry(1.4,0.28,12,38), wireMat(cBrown, 0.18),  3.2,-0.6, -0.8, -0.004, 0.003);
-  addObj(new THREE.OctahedronGeometry(0.9),        wireMat(cOrange,0.22),-3.5, 1.8,  0.4,  0.006, 0.007);
-  addObj(new THREE.OctahedronGeometry(0.55),       wireMat(cOrange,0.22), 3.3,-1.8,  0.2, -0.007, 0.005);
-  addObj(new THREE.OctahedronGeometry(0.35),       wireMat(cOrange,0.18), 0.8, 2.4,  0.6,  0.009,-0.006);
-  addObj(new THREE.IcosahedronGeometry(0.75,0),    wireMat(cBrown, 0.18), 1.6, 1.8,  0.5,  0.008,-0.005);
-  addObj(new THREE.IcosahedronGeometry(0.55,0),    wireMat(cPurple,0.18),-1.2,-2.2,  0.4, -0.006, 0.008);
+  function addObj(geo,mat,x,y,z,rx,ry){const m=new THREE.Mesh(geo,mat);m.position.set(x,y,z);scene.add(m);objects.push({m,rx,ry});}
+  addObj(new THREE.SphereGeometry(5,20,20),        wireMat(0xffffff,0.03), 0,   0,  -3,   0.001, 0.0008);
+  addObj(new THREE.TorusGeometry(2.0,0.38,14,48),  wireMat(cPurple,0.18),-3.0, 0.4,-1.5,  0.003, 0.004);
+  addObj(new THREE.TorusGeometry(1.4,0.28,12,38),  wireMat(cBrown, 0.18), 3.2,-0.6,-0.8, -0.004, 0.003);
+  addObj(new THREE.OctahedronGeometry(0.9),         wireMat(cOrange,0.22),-3.5, 1.8, 0.4,  0.006, 0.007);
+  addObj(new THREE.OctahedronGeometry(0.55),        wireMat(cOrange,0.22), 3.3,-1.8, 0.2, -0.007, 0.005);
+  addObj(new THREE.OctahedronGeometry(0.35),        wireMat(cOrange,0.18), 0.8, 2.4, 0.6,  0.009,-0.006);
+  addObj(new THREE.IcosahedronGeometry(0.75,0),     wireMat(cBrown, 0.18), 1.6, 1.8, 0.5,  0.008,-0.005);
+  addObj(new THREE.IcosahedronGeometry(0.55,0),     wireMat(cPurple,0.18),-1.2,-2.2, 0.4, -0.006, 0.008);
   addObj(new THREE.TorusKnotGeometry(0.55,0.15,90,14),wireMat(cOrange,0.20),0.2,-2.6,1.0,0.009,0.007);
   addObj(new THREE.TorusKnotGeometry(0.4,0.1,70,12), wireMat(cPurple,0.15),-2.0,2.5,0.5,-0.007,-0.009);
- 
   const pCount=700,pBuf=new Float32Array(pCount*3);
   for(let i=0;i<pCount*3;i++)pBuf[i]=(Math.random()-0.5)*16;
   const pGeo=new THREE.BufferGeometry();
   pGeo.setAttribute('position',new THREE.BufferAttribute(pBuf,3));
   scene.add(new THREE.Points(pGeo,new THREE.PointsMaterial({color:cOrange,size:0.022,transparent:true,opacity:0.5})));
- 
   let mx=0,my=0;
   window.addEventListener('mousemove',e=>{mx=(e.clientX/window.innerWidth-.5)*.7;my=(e.clientY/window.innerHeight-.5)*.7;});
- 
   let raf;
-  function animate(){
-    raf=requestAnimationFrame(animate);
-    objects.forEach(({m,rx,ry})=>{m.rotation.x+=rx;m.rotation.y+=ry;});
-    camera.position.x+=(mx-camera.position.x)*0.03;
-    camera.position.y+=(-my-camera.position.y)*0.03;
-    camera.lookAt(scene.position);
-    renderer.render(scene,camera);
-  }
+  function animate(){raf=requestAnimationFrame(animate);objects.forEach(({m,rx,ry})=>{m.rotation.x+=rx;m.rotation.y+=ry;});camera.position.x+=(mx-camera.position.x)*0.03;camera.position.y+=(-my-camera.position.y)*0.03;camera.lookAt(scene.position);renderer.render(scene,camera);}
   animate();
   document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelAnimationFrame(raf);else animate();});
 })();
