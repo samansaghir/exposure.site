@@ -105,15 +105,16 @@ section{padding:90px 60px;}
 /* The track holds original + clones and runs forever */
 .carousel-track{
   display:flex;
+  align-items:stretch;
   gap:24px;
   width:max-content;
-  /* 5 cards × 340px + 5 gaps × 24px = 1820px for one full set */
-  animation:marquee 28s linear infinite;
+  /* 4 cards × 340px + 4 gaps × 24px = 1456px for one full set */
+  animation:marquee 24s linear infinite;
 }
 .carousel-track:hover{animation-play-state:paused;}
 @keyframes marquee{
   0%  {transform:translateX(0);}
-  100%{transform:translateX(calc(-340px * 5 - 24px * 5));}
+  100%{transform:translateX(calc(-340px * 4 - 24px * 4));}
 }
 .service-card{
   background:var(--card);border:1px solid var(--border);
@@ -132,6 +133,9 @@ section{padding:90px 60px;}
 .service-icon svg{width:22px;height:22px;stroke:var(--accent);}
 .service-name{font-family:'Nohemi',sans-serif;font-weight:500;font-size:18px;color:#ffffff;margin-bottom:12px;}
 .service-desc{color:var(--muted);font-size:14px;line-height:1.75;flex:1;}
+.service-points{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;margin-top:2px;flex:1;align-content:flex-start;}
+.service-points li{display:flex;align-items:flex-start;gap:8px;color:#ffffff;font-size:13px;line-height:1.5;}
+.service-points li::before{content:'';flex-shrink:0;width:14px;height:14px;border-radius:50%;margin-top:2px;background:rgba(221,114,64,.1);border:1px solid rgba(221,114,64,.3);background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 8l2.5 2.5 5.5-5' stroke='%23DD7240' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;background-size:9px 9px;}
 .services-cta-wrap{text-align:center;margin-top:40px;}
  
 /* ── BUTTONS ── */
@@ -387,72 +391,106 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:24px 60px
           <div class="service-card">
             <div class="service-num">01</div>
             <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></div>
-            <div class="service-name">Custom WordPress Development</div>
-            <p class="service-desc">From scratch or redesign, I build fully custom WordPress websites that reflect your brand, load fast, and convert visitors into customers. No cookie cutter templates. Ever.</p>
+            <div class="service-name">Web Design</div>
+            <ul class="service-points">
+              <li>Custom Website Development</li>
+              <li>Business / Agency Websites</li>
+              <li>Author / Personal Websites</li>
+              <li>Portfolio Websites</li>
+              <li>Landing Pages</li>
+              <li>E-commerce Websites</li>
+              <li>Blog Websites</li>
+              <li>Other Custom Website Solutions</li>
+            </ul>
           </div>
  
           <div class="service-card">
             <div class="service-num">02</div>
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg></div>
-            <div class="service-name">WooCommerce Stores</div>
-            <p class="service-desc">Want to sell online? I build high performing WooCommerce stores with smooth checkout flows, product pages that convert, and a backend you can manage with ease.</p>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+            <div class="service-name">SEO</div>
+            <ul class="service-points">
+              <li>On-Page SEO</li>
+              <li>Off-Page SEO</li>
+              <li>Technical SEO</li>
+              <li>Google Business Profile (GBP) Optimization</li>
+              <li>Keyword Research</li>
+              <li>Website SEO Audit</li>
+            </ul>
           </div>
  
           <div class="service-card">
             <div class="service-num">03</div>
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
-            <div class="service-name">WordPress SEO</div>
-            <p class="service-desc">A beautiful website means nothing if no one finds it. I implement on page SEO best practices using Yoast SEO, from keyword optimization to technical SEO, so your site ranks where it should.</p>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
+            <div class="service-name">Digital Marketing</div>
+            <ul class="service-points">
+              <li>Social Media Management</li>
+              <li>Social Media Marketing</li>
+              <li>Content Strategy</li>
+            </ul>
           </div>
  
           <div class="service-card">
             <div class="service-num">04</div>
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-            <div class="service-name">Website Speed &amp; Performance</div>
-            <p class="service-desc">Slow websites lose customers. I optimize your WordPress site for Core Web Vitals, fast load times, and a seamless user experience across all devices.</p>
-          </div>
- 
-          <div class="service-card">
-            <div class="service-num">05</div>
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-            <div class="service-name">Theme &amp; Plugin Customization</div>
-            <p class="service-desc">Need something your current theme can't do? I customize Elementor layouts, tweak plugins, and build ACF powered custom content structures that fit your exact needs.</p>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg></div>
+            <div class="service-name">Logo Design</div>
+            <ul class="service-points">
+              <li>Custom Logo Design</li>
+              <li>Brand Logo Design</li>
+              <li>Minimal / Modern Logo Design</li>
+            </ul>
           </div>
  
           <!-- Clones for seamless loop -->
           <div class="service-card" aria-hidden="true">
             <div class="service-num">01</div>
             <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></div>
-            <div class="service-name">Custom WordPress Development</div>
-            <p class="service-desc">From scratch or redesign, I build fully custom WordPress websites that reflect your brand, load fast, and convert visitors into customers. No cookie cutter templates. Ever.</p>
+            <div class="service-name">Web Design</div>
+            <ul class="service-points">
+              <li>Custom Website Development</li>
+              <li>Business / Agency Websites</li>
+              <li>Author / Personal Websites</li>
+              <li>Portfolio Websites</li>
+              <li>Landing Pages</li>
+              <li>E-commerce Websites</li>
+              <li>Blog Websites</li>
+              <li>Other Custom Website Solutions</li>
+            </ul>
           </div>
  
           <div class="service-card" aria-hidden="true">
             <div class="service-num">02</div>
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg></div>
-            <div class="service-name">WooCommerce Stores</div>
-            <p class="service-desc">Want to sell online? I build high performing WooCommerce stores with smooth checkout flows, product pages that convert, and a backend you can manage with ease.</p>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+            <div class="service-name">SEO</div>
+            <ul class="service-points">
+              <li>On-Page SEO</li>
+              <li>Off-Page SEO</li>
+              <li>Technical SEO</li>
+              <li>Google Business Profile (GBP) Optimization</li>
+              <li>Keyword Research</li>
+              <li>Website SEO Audit</li>
+            </ul>
           </div>
  
           <div class="service-card" aria-hidden="true">
             <div class="service-num">03</div>
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
-            <div class="service-name">WordPress SEO</div>
-            <p class="service-desc">A beautiful website means nothing if no one finds it. I implement on page SEO best practices using Yoast SEO, from keyword optimization to technical SEO, so your site ranks where it should.</p>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
+            <div class="service-name">Digital Marketing</div>
+            <ul class="service-points">
+              <li>Social Media Management</li>
+              <li>Social Media Marketing</li>
+              <li>Content Strategy</li>
+            </ul>
           </div>
  
           <div class="service-card" aria-hidden="true">
             <div class="service-num">04</div>
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-            <div class="service-name">Website Speed &amp; Performance</div>
-            <p class="service-desc">Slow websites lose customers. I optimize your WordPress site for Core Web Vitals, fast load times, and a seamless user experience across all devices.</p>
-          </div>
- 
-          <div class="service-card" aria-hidden="true">
-            <div class="service-num">05</div>
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-            <div class="service-name">Theme &amp; Plugin Customization</div>
-            <p class="service-desc">Need something your current theme can't do? I customize Elementor layouts, tweak plugins, and build ACF powered custom content structures that fit your exact needs.</p>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg></div>
+            <div class="service-name">Logo Design</div>
+            <ul class="service-points">
+              <li>Custom Logo Design</li>
+              <li>Brand Logo Design</li>
+              <li>Minimal / Modern Logo Design</li>
+            </ul>
           </div>
  
         </div>
@@ -874,7 +912,7 @@ const sEl=document.getElementById('stats');if(sEl)sObs.observe(sEl);
 (function(){
   const track=document.getElementById('carouselTrack');
   if(!track)return;
-  const CARD_W=340,GAP=24,COUNT=5;
+  const CARD_W=340,GAP=24,COUNT=4;
   const loopPx=COUNT*(CARD_W+GAP);
   track.style.setProperty('--loop-offset',`-${loopPx}px`);
 })();
